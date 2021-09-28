@@ -1,0 +1,22 @@
+.todoContainer {
+  width: 400px;
+  height: 400px;
+  border: 1px solid;
+  border-radius: 5px;
+  margin: auto;
+  background: white;
+  padding: 10px;
+}
+.todoRow {
+  margin: 10px 5px;
+}
+.popup {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+.todoContainer button:last-child {
+  float: right;
+}

@@ -1,0 +1,24 @@
+<div class="todoTile">
+  <div
+    class="todoStatus"
+   
+  >
+    <div><b>Id</b> {{ todoObj.id }}</div>
+    <div><b>title</b> {{ todoObj.title }}</div>
+    <div><b>body</b> {{ todoObj.body}}</div>
+    <hr />
+    <div>
+      <Button (click)="EditTodo()">Edit</Button>
+      
+      <button (click)="deleteTodo()">Delete</button>
+      <Button (click)="viewTodo()">view</Button>
+    </div>
+  </div>
+</div>
+
+<app-add-edit-todo
+  [action]="'edit'"
+  [editObj]="todoObj"
+  *ngIf="showAddEditTodo"
+  (PopupClosed)="PopupClosed($event)"
+></app-add-edit-todo>

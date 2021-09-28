@@ -1,0 +1,27 @@
+.todoTile {
+  border: 1px solid;
+  border-radius: 5px;
+  width: 200px;
+  float: left;
+  position: relative;
+  margin: 5px;
+  display:flex;
+  display: inline; 
+  
+  margin:10px;
+}
+.todoStatus {
+  border-left: 10px solid;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.todoStatus button:last-child {
+  float: right;
+}
+.todoCompleted {
+  border-left: 10px solid green;
+}
+.todoPending {
+  border-left: 10px solid yellow;
+}

@@ -1,0 +1,16 @@
+<div class="popup">
+  <div class="todoContainer">
+
+    <div class="todoRow">Title: <input type="text" [(ngModel)]="title" /></div>
+    <div class="todoRow">body <input type="text" [(ngModel)]="body" /></div>
+   
+   
+    <hr />
+    <div>
+      <button *ngIf="action == 'add'" (click)="addTodo()">Add</button>
+      
+      <button *ngIf="action == 'edit'" (click)="editTodo()">Save</button>
+      <button (click)="ClosePopup()">Close</button>
+    </div>
+  </div>
+</div>

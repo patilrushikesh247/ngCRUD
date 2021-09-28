@@ -1,0 +1,23 @@
+<div>
+  <div class="headerContent">
+    <button class="btn btn-success" (click)="addTodo()">add</button>
+  </div>
+  <div *ngIf="showMessage" class="headerContent headerContentLeft">
+    <span>{{ messageTxt }}</span>
+  </div>
+
+  <hr />
+  <div>
+    <app-todo-tile
+      *ngFor="let todo of todoList"
+      [todoObj]="todo"
+      (todoListUpdated)="todoListUpdated($event)"
+    ></app-todo-tile>
+  </div>
+</div>
+
+<app-add-edit-todo
+  [action]="'add'"
+  *ngIf="showAddEditTodo"
+  (PopupClosed)="PopupClosed($event)"
+></app-add-edit-todo>
